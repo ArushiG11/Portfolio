@@ -1,8 +1,7 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react'; // Ensure this line is included
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), svgr()],
-  assetsInclude: ['**/*.glb'],
-})
+  plugins: [react()],
+      assetsInclude: ['**/*.glb'],
+    });
