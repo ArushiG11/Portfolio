@@ -3,7 +3,7 @@ import PortfolioLayout from '@/components/PortfolioLayout';
 export default function ResumePage() {
     return (
       <PortfolioLayout>
-        <div className="relative z-10 min-h-screen p-4 pt-20 flex flex-col items-center">
+        <div className="relative z-10 min-h-screen p-4 pt-20 pb-32 flex flex-col items-center">
           <h1 className="text-2xl md:text-3xl font-bold mb-3 text-white">My Resume</h1>
 
           <iframe
