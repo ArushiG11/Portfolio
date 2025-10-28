@@ -1,4 +1,3 @@
-// src/app/why-hire-me/page.tsx
 "use client";
 
 import { useState } from 'react';
@@ -65,11 +64,11 @@ export default function WhyHireMePage() {
 
   return (
     <PortfolioLayout>
-      <div className="relative z-10 min-h-screen px-4 py-12 pt-24">
+      <div className="relative z-10 min-h-screen px-4 py-12 pt-24 pb-32">
         {/* Close button in top right */}
         <Link 
           href="/" 
-          className="fixed top-6 right-6 z-50 w-10 h-10 flex items-center justify-center bg-white/10 hover:bg-white/20 rounded-full border border-white/20 transition hover:scale-110"
+          className="hidden md:flex fixed top-6 right-6 z-50 w-10 h-10 items-center justify-center bg-white/10 hover:bg-white/20 rounded-full border border-white/20 transition hover:scale-110"
         >
           <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
