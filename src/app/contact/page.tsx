@@ -110,4 +110,3 @@ export default function ContactPage() {
       </PortfolioLayout>
     );
   }
-  
