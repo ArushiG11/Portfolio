@@ -9,15 +9,7 @@ export interface Experience {
 }
 
 export const experience: Experience[] = [
-  {
-    company: "Rutgers University",
-    role: "Teaching Assistant",
-    period: "Sep 2024 – Present",
-    description:
-      "Part-time TA (on-site, New Brunswick) for CS170, CS211, CS334, and CS344. Led labs, held office hours, graded assignments, and supported course projects.",
-    tech: ["Python", "C/C++", "Java", "Algorithms", "HTML", "JavaScript", "CSS", "SQL"],
-    logo: "/Rutgers.png",
-  },
+  
   {
     company: "Robot Toolworx",
     role: "Software Engineer Intern",
@@ -26,6 +18,15 @@ export const experience: Experience[] = [
       "Implemented a production RAG pipeline across Ingester, Datastore, and Compiler services; added vector search with OpenAI + pgvector; instrumented tracing/analytics with Langfuse and OpenTelemetry.",
     tech: ["Python", "OpenAI", "pgvector", "Langfuse", "OpenTelemetry"],
     logo: "/Robotoolworx.jpg",
+  },
+  {
+    company: "Rutgers University",
+    role: "Teaching Assistant",
+    period: "Sep 2024 – Present",
+    description:
+      "Part-time TA (on-site, New Brunswick) for CS170, CS211, CS334, and CS344. Led labs, held office hours, graded assignments, and supported course projects.",
+    tech: ["Python", "C/C++", "Java", "Algorithms", "HTML", "JavaScript", "CSS", "SQL"],
+    logo: "/Rutgers.png",
   },
   {
     company: "MAQ Software",
