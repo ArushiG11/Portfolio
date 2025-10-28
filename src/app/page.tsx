@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <PortfolioLayout>
       {/* Hero Section */}
-      <section className="relative z-10 flex flex-col items-center justify-center h-screen text-center px-6">
+      <section className="relative z-10 flex flex-col items-center justify-center h-screen text-center px-6 overflow-hidden">
        
       <motion.h1
           initial={{ opacity: 0, y: 20 }}
