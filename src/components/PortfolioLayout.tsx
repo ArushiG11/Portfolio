@@ -62,7 +62,7 @@ export default function PortfolioLayout({ children }: PortfolioLayoutProps) {
   ];
 
   return (
-    <main className="relative min-h-screen w-full overflow-hidden text-white bg-black">
+    <main className="relative min-h-screen w-full text-white bg-black">
       {/* Particle Background */}
       <div className="pointer-events-none fixed inset-0 z-0">
         <Particles id="tsparticles" options={options} />
@@ -143,7 +143,7 @@ export default function PortfolioLayout({ children }: PortfolioLayoutProps) {
       </nav>
 
       {/* Page Content */}
-      <div className="relative z-10 min-h-screen pb-24">{children}</div>
+      <div className="relative z-10">{children}</div>
 
       {/* Footer */}
       <footer className="fixed bottom-0 left-0 right-0 z-30 bg-black/80 backdrop-blur-md border-t border-white/10">
@@ -200,4 +200,3 @@ export default function PortfolioLayout({ children }: PortfolioLayoutProps) {
     </main>
   );
 }
-
