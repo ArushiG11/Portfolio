@@ -3,7 +3,11 @@
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
+  inputs = {}
 
 [build.environment]
   NODE_VERSION = "20.18.0"
+
+[functions]
+  node_bundler = "esbuild"
 
