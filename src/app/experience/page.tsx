@@ -7,7 +7,7 @@ import { experience } from '@/data/experience';
 export default function ExperiencePage() {
   return (
     <PortfolioLayout>
-      <div className="relative z-10 min-h-screen p-6 pt-24 max-w-6xl mx-auto">
+      <div className="relative z-10 min-h-screen p-6 pt-24 pb-32 max-w-6xl mx-auto">
         {/* Vertical Timeline */}
         <div className="relative">
           {/* Centered Timeline line */}
