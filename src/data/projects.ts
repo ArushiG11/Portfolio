@@ -21,7 +21,7 @@ Built an ML pipeline to analyze GitHub repos, extract metrics, and predict bug-p
 Used CodeBERT + Gemini for summarization and refactoring suggestions.
 Visualized results in a Streamlit dashboard with a Dockerized FastAPI backend.`,
     github: "https://github.com/ArushiG11/codestory",
-    demo: "https://codestory.streamlit.app",
+    // demo: "https://codestory.streamlit.app",
   },
   {
     title: "AutoJobTrack – Smart Job Tracker",
@@ -33,7 +33,7 @@ Automated pipeline extracting job-related email data via Gmail Pub/Sub.
 Gemini for NLP, persisted in Firestore, exported to Google Sheets.
 Interactive dashboard deployed on Cloudflare.`,
     github: "https://github.com/ArushiG11/mail2sheet",
-    demo: "https://autojobtrack.vercel.app",
+    // demo: "https://autojobtrack.vercel.app",
   },
   {
     title: "Serverless Finance Tracker",
