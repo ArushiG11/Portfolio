@@ -7,7 +7,7 @@ import { education } from '@/data/education';
 export default function EducationPage() {
   return (
     <PortfolioLayout>
-      <div className="relative z-10 min-h-screen px-6 py-12 pt-24 max-w-6xl mx-auto">
+      <div className="relative z-10 min-h-screen px-6 py-12 pt-24 pb-32 max-w-6xl mx-auto">
         {/* Vertical Timeline */}
         <div className="relative">
           {/* Centered Timeline line */}
