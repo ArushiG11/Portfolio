@@ -2,20 +2,26 @@
 import { NextRequest, NextResponse } from "next/server";
 import { OpenAI } from "openai";
 import { createClient } from "@supabase/supabase-js";
+import { getCustomResponse } from "@/data/customResponses";
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY! });
 const supabase = createClient(
   process.env.SUPABASE_URL!,
   process.env.SUPABASE_ANON_KEY!
 );
-type ChatMessage = { role: 'user' | 'assistant'; content: string };
+type ChatMessage = { role: 'user' | 'assistant' | 'system'; content: string };
 
 export async function POST(req: NextRequest) {
     const { question, history }: { question: string; history: ChatMessage[] } = await req.json();
 
-
   if (!question) {
     return NextResponse.json({ error: "Missing question" }, { status: 400 });
+  }
+
+  // Check for custom responses first (greetings, hobbies, etc.)
+  const customResponse = getCustomResponse(question);
+  if (customResponse) {
+    return NextResponse.json({ answer: customResponse });
   }
 
   // Step 1: Embed the user query
@@ -41,11 +47,21 @@ export async function POST(req: NextRequest) {
   const context = matches.map((doc: any) => doc.content).join("\n\n");
 
   // Step 3: Generate response with OpenAI
-  const prompt = `You are Arushi Gupta's AI assistant. Use the following resume and project context to answer questions honestly, concisely, and professionally:\n\n${context}\n\nQuestion: ${question}`;
-  const chatMessages: ChatMessage[] = [
-    { role: 'assistant', content: 'You are a helpful AI assistant for Arushi Gupta. Only answer based on the context.' },
+  const prompt = `You are Arushi Gupta's AI assistant. Use the following resume and project context to answer questions honestly, concisely, and professionally. 
+
+If the question is about personal interests, hobbies, or general conversation that's not in the resume, you can have a friendly, conversational response while staying professional.
+
+Context from resume and projects:
+${context}
+
+Question: ${question}
+
+Provide a helpful, authentic answer based on the context available.`;
+  
+  const chatMessages = [
+    { role: 'system' as const, content: 'You are a helpful, friendly AI assistant representing Arushi Gupta. Answer questions based on the resume context when available, and have natural conversations when appropriate.' },
     ...history,
-    { role: 'user', content: prompt }
+    { role: 'user' as const, content: prompt }
   ];
   
   const chatRes = await openai.chat.completions.create({
