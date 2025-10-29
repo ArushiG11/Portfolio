@@ -124,9 +124,9 @@ export default function WhyHireMePage() {
             <h2 className="font-semibold mb-2 text-white">💻 Tech Stack</h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 text-sm text-zinc-300">
               {[
-                'Python','PyTorch','scikit-learn','Transformers','FastAPI',
-                'RAG','Vector Search','pgvector','PostgreSQL',
-                'OpenAI','Gemini','Hugging Face'
+                'Python','FastAPI','PostgreSQL + pgvector','Model Fine-tuning & Prompt Engineering ','Hugging Face Transformers',
+                'RAG','Docker','AWS (Lambda, S3, Cognito)','GCP (Cloud Run, Firestore)',
+                'React + Next.js','LangChain / LangGraph','CI/CD (GitHub Actions)'
               ].map(skill => (
                 <span
                   key={skill}
